@@ -42,7 +42,7 @@ Polymorphism: Derived classes such as CommercialJet and Helicopter inherit from 
 
 3. Algorithm Optimizations
 
-Spatial Partitioning: To optimize collision detection, the airspace is divided into a grid matrix. Aircraft only compute distances against entities within their immediate or adjacent cells, reducing the computational complexity from $O(n^2)$ to a near-linear scale.
+Spatial Partitioning: To optimize collision detection, the airspace is divided into a grid matrix. Aircraft only compute distances against entities within their immediate or adjacent cells, reducing the computational complexity.
 
 Surface Caching: Static JSON map geometries are rendered once into GPU memory during the initialization phase, rather than being redrawn in the main rendering loop.
 
