@@ -3930,26 +3930,6 @@
         ]
       },
       {
-        "name": "RAMEN1E",
-        "rwy_origin": "07L",
-        "route": [
-          {
-            "name": "SMT"
-          },
-          {
-            "name": "ROVER"
-          },
-          {
-            "name": "RAMEN"
-          }
-        ],
-        "display_route": [
-          "SMT",
-          "ROVER",
-          "RAMEN"
-        ]
-      },
-      {
         "name": "BEKOL1D",
         "rwy_origin": "25C",
         "route": [
