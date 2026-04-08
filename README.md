@@ -14,23 +14,23 @@ The simulator leverages VBO to render tens of thousands of map geometries seamle
 * **MVC Architecture:** Logic modules handle autonomous physics and routing, while isolated rendering pipelines manage the GUI and GPU drawing independently.
 * **LNAV Routing (Dijkstra's Algorithm):** Aircraft feature autonomous route recovery. If an aircraft is vectored off-course and instructed to resume navigation, the system uses Dijkstra's shortest-path algorithm to dynamically determine the optimal forward-facing waypoint to reconnect to the STAR/SID procedure.
 * **Safety Systems (TCAS & STCA):** Continuous background matrix calculations predict Short-Term Conflict Alerts up to 120 seconds in advance, drawing visual prediction lines. Features full Wake Turbulence detection and  TCAS alert.
-* **Text-to-Speech (TTS):** Fully threaded, asynchronous [pyttsx3](https://github.com/nateshmbhat/pyttsx3) integration for automated ATC clearances and pilot readbacks without interrupting the main game loop.
+* **Text-to-Speech:** Fully threaded, asynchronous [pyttsx3](https://github.com/nateshmbhat/pyttsx3) integration for automated ATC clearances and pilot readbacks without interrupting the main game loop.
 * **ILS & Glideslope Tracking:** Automated Localizer and Glideslope interception logic utilizing proportional navigation for smooth final approaches.
 
 ---
 
 ## 🎮 How to Play
 
-As an ATC controller, you can issue commands via Mouse, Keyboard Shortcuts, or the built-in Command Line Interface (CLI).
+As an ATC controller, you can issue commands via Mouse, Keyboard Shortcuts, or the built-in Command Line Interface.
 
 ### 🖱️ Mouse Controls
-* **Select Aircraft:** `Left Click` on a radar target (green/orange square) or click its corresponding Flight Strip on the right panel.
+* **Select Aircraft:** `Left Click` on a radar target or click its corresponding Flight Strip on the right panel.
 * **Radar Vectoring (Heading):** `Left Click & Drag` from a selected aircraft to draw a yellow target heading line. Release to issue the heading command.
-* **Direct To (Waypoint):** `Drag` the heading line directly over a navigational waypoint (cyan triangle) and release. The aircraft will automatically adjust its route to fly directly.
+* **Direct To (Waypoint):** `Drag` the heading line directly over a navigational waypoint and release. The aircraft will automatically adjust its route to fly directly.
 * **Change Altitude:** `Scroll Up/Down` while an aircraft is selected to increase/decrease target altitude in 1,000 ft increments.
 * **Camera Pan & Zoom:** `Left Click & Drag` on an empty map area to pan. `Scroll Up/Down` on the map to zoom in/out dynamically.
 
-### 🎛️ UI Panel Controls (Right Panel)
+### 🎛️ UI Panel Controls
 Select an aircraft to access the tactical command panel:
 * **< / > Buttons:** Fine-tune Target Heading (5°), Target Speed (10kts), and Target Altitude (1,000ft).
 * **APP / DEP / HOLDING:** Toggle between autonomous LNAV (following the flight plan) and manual vectoring.
@@ -60,7 +60,7 @@ Click the `⚙️` gear icon in the bottom right corner to access System Setting
 
 ---
 
-## 🛣️ Roadmap (Future Iterations)
+## 🛣️ Roadmap
 
 The architecture is built to be highly extensible. Planned future modules include:
 
