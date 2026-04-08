@@ -7,26 +7,26 @@ A high-performance, 2D vector-based Air Traffic Control simulator written in Pyt
 
 ## 🎯 Project Overview
 Project VHHH is a real-time approach-and-departure radar control simulation. The primary objective is to sequence and direct aircraft to the active runways while strictly maintaining standard separation minimums.
-The simulator leverages VBO to render tens of thousands of map geometries (coastlines, FIR boundaries, airways) seamlessly alongside interactive UI panels, ensuring a stable 60 FPS experience.
+The simulator leverages VBO to render tens of thousands of map geometries seamlessly alongside interactive UI panels, ensuring a stable 60 FPS experience.
 
 ## ✨ Key Features & Technical Highlights
 
 * **Strict MVC Architecture:** Logic modules handle autonomous physics and routing, while isolated rendering pipelines manage the GUI and GPU drawing independently.
 * **Smart LNAV Routing (Dijkstra's Algorithm):** Aircraft feature autonomous route recovery. If an aircraft is vectored off-course and instructed to resume navigation, the system uses Dijkstra's shortest-path algorithm to dynamically determine the optimal forward-facing waypoint to reconnect to the STAR/SID procedure.
-* **Advanced Safety Systems (TCAS & STCA):** Continuous background matrix calculations predict Short-Term Conflict Alerts (STCA) up to 120 seconds in advance, drawing visual prediction lines. Features full Wake Turbulence detection and  TCAS alert.
+* **Advanced Safety Systems (TCAS & STCA):** Continuous background matrix calculations predict Short-Term Conflict Alerts up to 120 seconds in advance, drawing visual prediction lines. Features full Wake Turbulence detection and  TCAS alert.
 * **Text-to-Speech (TTS) Integration:** Fully threaded, asynchronous [pyttsx3](https://github.com/nateshmbhat/pyttsx3) integration for automated ATC clearances and pilot readbacks without interrupting the main game loop.
 * **ILS & Glideslope Tracking:** Automated Localizer and Glideslope interception logic utilizing proportional navigation for smooth final approaches.
 
 ---
 
-## 🎮 How to Play (Controls)
+## 🎮 How to Play
 
 As an ATC controller, you can issue commands via Mouse, Keyboard Shortcuts, or the built-in Command Line Interface (CLI).
 
 ### 🖱️ Mouse Controls
 * **Select Aircraft:** `Left Click` on a radar target (green/orange square) or click its corresponding Flight Strip on the right panel.
 * **Radar Vectoring (Heading):** `Left Click & Drag` from a selected aircraft to draw a yellow target heading line. Release to issue the heading command.
-* **Direct To (Waypoint):** `Drag` the heading line directly over a navigational waypoint (cyan triangle) and release. The aircraft will automatically adjust its route to fly direct.
+* **Direct To (Waypoint):** `Drag` the heading line directly over a navigational waypoint (cyan triangle) and release. The aircraft will automatically adjust its route to fly directly.
 * **Change Altitude:** `Scroll Up/Down` while an aircraft is selected to increase/decrease target altitude in 1,000 ft increments.
 * **Camera Pan & Zoom:** `Left Click & Drag` on an empty map area to pan. `Scroll Up/Down` on the map to zoom in/out dynamically.
 
