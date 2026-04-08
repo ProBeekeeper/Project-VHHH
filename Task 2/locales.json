@@ -32,7 +32,7 @@
         "min_cost": "理論最低成本：{}",
         "already_connected": "已連通，無需重複建設！",
         "hide_mst": "隱藏 MST",
-        "show_mst": "顯示 MST方案",
+        "show_mst": "顯示 MST",
         "restart": "重新開始",
         "game_over": "所有城市已連通！遊戲結束",
         "score": "表現得分：{:.1f}%",
