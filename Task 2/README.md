@@ -1,38 +1,71 @@
-# Road Connector - Kruskal's MST Simulation Game
+# 🛣️ Road Connector: Kruskal's MST Explorer
 
-## 1. Project Introduction
-[cite_start]**Road Connector** is an interactive simulation game developed for the **COMP2090SEF/COMP8090SEF/S209W** course project. The game challenges players to connect multiple cities with the minimum total construction cost, effectively simulating the real-world problem of designing efficient infrastructure networks.
+![Python](https://img.shields.io/badge/python-3.x-blue.svg)
+![Pygame](https://img.shields.io/badge/pygame-2.x-green.svg)
+![Course](https://img.shields.io/badge/Course-COMP2090SEF%20%2F%20COMP8090SEF-orange.svg)
 
-[cite_start]This project serves as the submission for **Task 2: Self-study on a new data structure AND a new algorithm**[cite: 16].
+An interactive, educational application demonstrating **Kruskal's Algorithm** for finding the Minimum Spanning Tree (MST) and the **Disjoint Set Union (DSU)** data structure. Built with Python and Pygame.
 
-## 2. Core Features
-* **Interactive Gameplay**: Click to connect cities and build your own road network.
-* [cite_start]**Real-time Validation**: Uses **Disjoint Set Union (DSU)** to detect if two cities are already connected, preventing redundant construction[cite: 126].
-* [cite_start]**Algorithmic Demonstration**: Provides a "Show MST" feature that visualizes the optimal solution using **Kruskal's Algorithm**[cite: 126].
-* **Scoring System**: Compares your total cost against the theoretical minimum and provides a performance score.
-* **Bilingual Support**: Full support for both English and Chinese (简体中文) interfaces.
+This project was developed for the **Data Structures, Algorithms And Problem Solving** course at Hong Kong Metropolitan University (HKMU).
 
-## 3. Self-Study Topics (Task 2)
-[cite_start]As required by the curriculum, this project explores a new data structure and a new algorithm not covered in the standard course[cite: 40]:
+---
 
-### A. Data Structure: Disjoint Set Union (DSU)
-* [cite_start]**Abstract Data Type (ADT)**: Manages a partition of a set into disjoint subsets[cite: 45].
-* **Optimizations**: 
-    * **Path Compression**: Flattens the structure of the tree, making future operations faster.
-    * **Union by Rank**: Ensures the tree remains balanced.
-* [cite_start]**Application**: Used for cycle detection and connectivity checks in the game[cite: 126].
+## ✨ Features
 
+* **Interactive Gameplay**: Manually connect dynamically generated cities and attempt to build the most cost-effective road network.
+* **Algorithmic Evaluation**: Compares your human-built network cost against the absolute mathematical minimum calculated by Kruskal's Algorithm in real-time.
+* **Visual MST Toggle**: Easily view the theoretical Minimum Spanning Tree overlaid on the map.
+* **Bilingual Support**: Fully localized in English and Traditional Chinese (繁體中文).
+* **Robust Data Structures**: Under the hood, the application relies on a highly optimized Disjoint Set Union (DSU) utilizing *Path Compression* and *Union by Rank*.
 
+## 🛠️ Project Structure
 
-### B. Algorithm: Kruskal's Algorithm
-* **Purpose**: A greedy algorithm used to find the **Minimum Spanning Tree (MST)** for a connected weighted graph.
-* [cite_start]**Complexity**: Analyzed as $O(E \log E)$ where $E$ is the number of potential roads (edges)[cite: 46].
-* **Process**: Sorts all potential edges by cost and adds them to the tree using DSU to ensure no cycles are formed.
+    📦 Task 2
+     ┣ 📜 main.py       # The Pygame UI controller, event loops, and rendering logic.
+     ┣ 📜 core.py       # Game engine handling state, Kruskal's algorithm, and distance calculations.
+     ┣ 📜 dsu.py        # Abstract Data Type: Disjoint Set Union implementation.
+     ┣ 📜 config.py     # Centralized configuration for UI colors, fonts, and dimensions.
+     ┗ 📜 locales.json  # Localization dictionary for English and Chinese texts.
 
+## 🚀 Getting Started
 
-
-## 4. Installation & Execution
 ### Prerequisites
-* Python 3.x
-* Pygame library
 
+Ensure you have Python 3.x installed on your system. You will also need to install the `pygame` library.
+
+    pip install pygame
+
+### Running the Application
+
+1. Clone this repository or download the source code files.
+2. Navigate to the project directory in your terminal.
+3. Run the main Python script:
+
+    python main.py
+
+## 🎮 How to Play
+
+1. **Launch the Game:** Select your preferred language (English or 中文) and click "Start Game".
+2. **Connect Cities:** Click on any city (green/red circles) to select it, then click on another city to build a connecting road.
+3. **Minimize Costs:** Your goal is to connect all cities together using the shortest total road distance. The current cost is displayed on the left.
+4. **Game Over & Evaluation:** Once all cities are connected, the game will evaluate your performance percentage against the mathematical minimum cost.
+5. **Learn:** Click "Show MST" at any time to see the optimal orange path generated by Kruskal's algorithm.
+
+## 🧠 Algorithmic Background
+
+### Kruskal's Algorithm
+A greedy algorithm that finds a Minimum Spanning Tree for a connected weighted graph. It sorts all edges from lowest weight to highest and adds them one by one to the growing spanning tree, skipping any edges that would form a cycle.
+* **Time Complexity:** $O(E \log V)$
+
+### Disjoint Set Union (DSU)
+A data structure that tracks a set of elements partitioned into a number of disjoint (non-overlapping) subsets. It is used here to efficiently detect whether adding a road between two cities will create a cycle.
+* **Optimizations Used:** Path Compression & Union by Rank.
+* **Time Complexity:** Amortized $O(\alpha(V))$ per operation, where $\alpha$ is the Inverse Ackermann function.
+
+## 🎥 Demo Video
+
+Watch our 5-minute introduction video to see the Road Connector in action, understand the gameplay, and learn about the underlying algorithms:
+
+[![Watch the Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](INSERT_YOUR_VIDEO_LINK_HERE)
+
+*(Note: Click the badge above to watch the project demonstration.)*
