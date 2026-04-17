@@ -32,7 +32,8 @@ The easiest way to jump into the radar room:
 ### Option 2: Run from Source Code
 For developers or users on other operating systems (macOS/Linux):
 1. Clone this repository to your local machine:
-   ```git clone [https://github.com/ProBeekeeper/project-vhhh.git](https://github.com/ProBeekeeper/project-vhhh.git)
+   ```
+   git clone [https://github.com/ProBeekeeper/project-vhhh.git](https://github.com/ProBeekeeper/project-vhhh.git)
    cd project-vhhh
    ```
 2. Ensure you have Python 3.9 or newer installed. Install the required dependencies:
